@@ -5,6 +5,13 @@
 
 - Ubuntu 20.04
 
+## Software requirements
+- HTTP
+	- nginx 1.20.1
+- SSL
+	- snapd 2.51.4
+	- certbot 1.18.0
+
 ## Nginx
 ### Install Nginx
 
