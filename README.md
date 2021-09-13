@@ -71,10 +71,11 @@ server {
 5. Delete default file from  ``` /etc/nginx/sites-enabled/ ``` (``` rm -rf /etc/nginx/sites-enabled/default ```)
 6. Type ``` nginx -t ``` To check syntax. Result should be: ``` nginx: the configuration file /etc/nginx/nginx.conf syntax is ok ```
 7. Move to ``` /var/www/ ```
-8. Create new directory ``` /var/www/%hostname%/public_html ```
-9. In new directory place project build 
-10. In command line type: ``` sudo systemctl restart nginx ``` to restart nginx
-11. Done. Your project build on server
+8. Create new directory ``` mkdir /var/www/%hostname%/ ```
+9. Create directory ``` mkdir /var/www/%hostname%/public_html ```
+10. In new directory place project build 
+11. In command line type: ``` sudo systemctl restart nginx ``` to restart nginx
+12. Done. Your project build on server
 
 <a name="ssl"></a>
 ## SSL (HTTPS)
@@ -92,6 +93,8 @@ server {
 7. ``` sudo certbot renew --dry-run ``` To authomaticaly renew certificates
 8. Done. Go to https://%hostname%.ru
 ![Result](https://sun9-80.userapi.com/impg/FJyZ0rnNfZLO3EVofTbilBPzOalhHPm8p0CPqw/qyUg0GZ3v3Y.jpg?size=1166x332&quality=96&sign=b9f25a1a4812b7588b40e11640dffae5&type=album)
+
+P.S To set certs for new nginx configuration type ``` sudo certbot --nginx ```
 
 <a name="clone_from_git"></a>
 ## Clonning project from Git
